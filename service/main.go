@@ -48,6 +48,7 @@ func main() {
 	server := thrift.NewTSimpleServer4(processor, serverTransport, transportFactory, protocolFactory)
 
 	log.Printf("Starting hello server listening on %s", listenAddr)
+	log.Printf("Server listening on: %d", listenAddr)
 	if err = server.Serve(); err != nil {
 		log.Fatalf("Error calling serve on hello server: %s", err.Error())
 	}
