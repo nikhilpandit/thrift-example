@@ -49,6 +49,9 @@ func main() {
 
 	log.Printf("Starting hello server listening on %s", listenAddr)
 	log.Printf("Server listening on: %d", listenAddr)
+	for i in range listenAddr {
+		log.Printf(i)
+	}
 	if err = server.Serve(); err != nil {
 		log.Fatalf("Error calling serve on hello server: %s", err.Error())
 	}
